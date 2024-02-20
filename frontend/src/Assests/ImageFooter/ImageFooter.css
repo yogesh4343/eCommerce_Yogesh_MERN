@@ -1,0 +1,11 @@
+.container:hover{
+    transition: all 1s ease-in;
+}
+
+.container:hover .lightHeading{
+    color:white;
+}
+
+.container:not(:hover) .lightHeading{
+    color:#6a747e
+}
