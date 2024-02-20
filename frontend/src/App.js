@@ -106,10 +106,15 @@ function App() {
            {/* {loadUser.status   && <Route exact path='/addtocart' element={<AddToCart />} /> } */}
             <Route path='/addtocart' element={<AddToCart />} /> 
 
-           {loadUser.status   && <Route exact path='/password/update' element={<ChangePassword />} /> }
-           {loadUser.status   && <Route exact path='/checkoutsteps' element={<CheckoutSteps />} /> }
+           {/* {loadUser.status   && <Route exact path='/password/update' element={<ChangePassword />} /> } */}
+           <Route exact path='/password/update' element={<ChangePassword />} /> 
+
+           {/* {loadUser.status   && <Route exact path='/checkoutsteps' element={<CheckoutSteps />} /> } */}
+            <Route exact path='/checkoutsteps' element={<CheckoutSteps />} /> 
+
            {/* {loadUser.status   && <Route exact path='/shippingInfo' element={<ShippingInfo />} /> } */}
              <Route exact path='/shippingInfo' element={<ShippingInfo />}  />
+             
            {loadUser.status   && <Route exact path='/order/confirm' element={<OrderConfirm />} /> }
            {loadUser.status   && <Route exact path='/process/payment' element={<ProcessPayment/>} /> }
 
