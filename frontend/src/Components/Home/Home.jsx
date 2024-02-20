@@ -11,14 +11,14 @@ import ImageFooter2 from '../../Assests/ImageFooter/ImageFooter2'
 import Footer from '../Footer/Footer'
 import EmailSection from '../../Assests/EmailSection/EmailSection'
 import { useDispatch, useSelector } from 'react-redux'
-import { CategoryReducer, catReducer } from '../../Store/Slice/ProductSlice'
+import { CategoryReducer, catReducer, featureProductReducer } from '../../Store/Slice/ProductSlice'
 import { NavLink } from 'react-router-dom'
 
 const Home = () => {
 
   const dispatch = useDispatch() 
   // const dispatch = useDispatch() 
-  const {categoryProduct } = useSelector(state=>state.products)
+  const {categoryProduct , featureProduct } = useSelector(state=>state.products)
   const {product} = {...categoryProduct}
   // console.log(product)
 
@@ -80,6 +80,7 @@ const prod = product && product.map((curEl , id)=>{
   useEffect(()=>{
     // dispatch(productReducer())
     dispatch(CategoryReducer(productNewBrandArr))
+    dispatch(featureProductReducer())
     dispatch(catReducer())        // ye category fetch kr rha h
     // dispatch(singleCategoryReducer(category))
   // },[dispatch , category ])
