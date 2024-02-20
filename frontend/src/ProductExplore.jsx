@@ -14,6 +14,7 @@ const ProductExplore = () => {
   const dispatch = useDispatch()
   // const products = useSelector(state=>state.products)
   const {featureProduct} = useSelector(state=>state.products)
+  // console.log(featureProduct);
 
 
   
@@ -26,7 +27,8 @@ const ProductExplore = () => {
 
   useEffect(()=>{
   dispatch(featureProductReducer())
-  },[dispatch , featureProduct ])
+  // },[dispatch , featureProduct ])
+  },[dispatch  ])
 
   
   return (
