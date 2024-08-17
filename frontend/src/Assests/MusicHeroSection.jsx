@@ -17,7 +17,7 @@ const MusicHeroSection = () => {
     let [second , setSecond] = useState(0)
 
   
-    var countDownDate = new Date("mar 5, 2024 15:37:25").getTime();
+    var countDownDate = new Date("mar 5, 2025 15:37:25").getTime();
 
     // Update the count down every 1 second
     // let x = setInterval(function() {
